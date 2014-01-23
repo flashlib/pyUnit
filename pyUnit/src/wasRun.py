@@ -1,4 +1,5 @@
 from pyTestCase import PyTestCase
+from pyException import PyException
 
 class WasRun(PyTestCase):
     def __init__(self, name):
@@ -14,7 +15,7 @@ class WasRun(PyTestCase):
         self.log += " tearDown"
         
     def testBrokenMethod(self):
-        raise Exception
+        raise PyException
 
     
     

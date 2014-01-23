@@ -1,4 +1,5 @@
 from pyTestResult import PyTestResult
+from pyException import PyException
 
 class PyTestCase(object):
     def __init__(self, name):
@@ -19,11 +20,11 @@ class PyTestCase(object):
         try:
             method = getattr(self, self.name)
             method()
-        except AssertionError, e:
-            print e
-            raise
-        except Exception, e:
-            result.testFailed()
+        except PyException:
+            result.testFailed()            
+        #except AssertionError, e:
+        #    print e
+        #    raise
          
         self.tearDown()
         return result
