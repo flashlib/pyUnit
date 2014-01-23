@@ -8,7 +8,6 @@ from wasRun import WasRun
 from pyTestResult import PyTestResult
 
 class TestCaseTest(PyTestCase):
-
     def testTemplateMethod(self):
         print 'testTemplateMethod'
         test = WasRun("testMethod")

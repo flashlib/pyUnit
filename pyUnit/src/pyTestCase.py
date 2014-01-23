@@ -20,8 +20,6 @@ class PyTestCase(object):
             method = getattr(self, self.name)
             method()
         except AssertionError, e:
-            #How to raise the orginal exception?
-            #result.testFailed()
             print e
             raise
         except Exception, e:
