@@ -11,8 +11,7 @@ class PyTestCase(object):
     def tearDown(self):
         pass
     
-    def run(self):
-        result = PyTestResult()
+    def run(self, result):
         result.testStarted()        
         self.setup()
         
@@ -27,6 +26,5 @@ class PyTestCase(object):
         #    raise
          
         self.tearDown()
-        return result
 
 
